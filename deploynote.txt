@@ -1,2 +1,4 @@
 npm install 
 npm clear-test-dependencies
+npm run add-prod-dependencies
+
