@@ -1,6 +1,2 @@
 npm install 
-npm clear-test-dependencies
-npm run add-prod-dependencies
-npm install -g serverless@3.40.0 serverless-prune-plugin serverless-dotenv-plugin
-sls prune -n 1
- serverless deploy
+
