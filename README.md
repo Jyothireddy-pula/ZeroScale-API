@@ -116,6 +116,7 @@ GET	/fetchHost/:id	Fetch host detail by id
 
 Jyothi Reddy.Pula
 
-🔗 Connect on LinkedIn
+[🔗 Connect on LinkedIn](https://www.linkedin.com/in/jyothireddy-pula-5b3a01337/)
+
 
 📧 Email:jyothireddypula@gmail.com
