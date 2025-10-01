@@ -98,7 +98,7 @@ npx serverless offline
 
 npx serverless deploy
 
-🌐 Endpoints
+🌐 Endpoints.
 
 Method	Endpoint	Description
 
