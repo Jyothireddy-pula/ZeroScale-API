@@ -112,7 +112,7 @@ POST	/insert_review	Insert a new review
 
 GET	/fetchHost/:id	Fetch host detail by id
 
-👨‍💻Creator and Maintainer
+👨‍💻Creator and Maintainer.
 
 Jyothi Reddy.Pula
 
