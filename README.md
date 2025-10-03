@@ -98,19 +98,6 @@ npx serverless offline
 
 npx serverless deploy
 
-🌐 Endpoints.
-
-Method	Endpoint	Description
-
-GET	/	Home route, checks if API is running
-
-GET	/fetchHosts	Fetch all hosts
-
-GET	/fetchHosts/:state	Fetch hosts by state
-
-POST	/insert_review	Insert a new review
-
-GET	/fetchHost/:id	Fetch host detail by id
 
 👨‍💻Creator and Maintainer.
 
