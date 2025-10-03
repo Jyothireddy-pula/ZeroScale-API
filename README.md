@@ -1,5 +1,4 @@
 # ZeroScale-API
-Overview 🔍
 
 ( ZeroScale-API ) - Scalable & Cost-Optimized Serverless Backend
 
