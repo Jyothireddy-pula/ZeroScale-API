@@ -58,6 +58,10 @@ Rate limiting to prevent abuse ⚖️
 
 Logging and monitoring with AWS CloudWatch 📊
 
+
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
+
+
 🛠️ Tech Stack
 
 Node.js (Runtime: 18.x) 💚
