@@ -35,6 +35,9 @@ Deploy to AWS – Automatically updates the AWS Lambda function and connects wit
 
 Verify and Activate Lambda – Ensures the function is running seamlessly after deployment.
 
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
+
+
 ✨ Features
 
 Fetch reviews, post reviews, and find people (hosts) based on various parameters like state or ID.
