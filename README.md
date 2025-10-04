@@ -5,6 +5,7 @@
 ZeroScale-API is a scalable, serverless backend solution designed for efficiently managing profiles and reviews. Built using the Serverless Framework and deployed on AWS Lambda, it eliminates infrastructure management while ensuring cost-effective scaling and high availability.
 
 
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
 
 💰 Cost Efficiency & Scalability
 
