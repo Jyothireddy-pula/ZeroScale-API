@@ -18,6 +18,9 @@ When traffic increases, it seamlessly scales up using the AWS API Gateway to han
 
 After exceeding 1 million requests, costs are incurred based on AWS Lambda pricing.
 
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
+
+
 🚀 Fully Automated & Cost-Optimized CI/CD Deployment
 
 Run Code Quality Checks – ESLint for linting and Jest for API endpoint testing.
