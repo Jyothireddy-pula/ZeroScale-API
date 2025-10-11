@@ -122,6 +122,7 @@ POST	/insert_review	Insert a new review
 
 GET	/fetchHost/:id	Fetch host detail by id
 
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
 
 👨‍💻Creator and Maintainer.
 
