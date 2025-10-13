@@ -76,6 +76,8 @@ AWS API Gateway
 
 Serverless Framework
 
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
+
 🔐 Security Features
 
 ✅ Rate Limiting – Prevents abuse and DDoS attacks, ensuring API stability.
