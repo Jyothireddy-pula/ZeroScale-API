@@ -88,6 +88,8 @@ Serverless Framework
 
 ✅ Database Security – MongoDB Atlas is secured with IP whitelisting, restricting unauthorized access.
 
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
+
 🔧 Setup Instructions
 
 1️⃣ Clone the Repository 🔗
@@ -109,6 +111,8 @@ npx serverless offline
 5️⃣ Deploy to AWS Lambda 🚀
 
 npx serverless deploy
+
+<hr style="border: 1px solid #ccc; margin: 20px 0;">
 
 🌐 Endpoints.
 
