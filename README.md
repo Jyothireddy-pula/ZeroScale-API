@@ -10,6 +10,7 @@ ZeroScale-API is a scalable, serverless backend solution designed for efficientl
 💰 Cost Efficiency & Scalability
 
 
+
 The API scales down to approximately zero cost for up to 1 million API requests per month.
 
 If there is no traffic, the infrastructure automatically scales down to near-zero cost, inclusive of AWS services like S3, API Gateway, and other dependencies.
