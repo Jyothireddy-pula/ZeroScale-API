@@ -1,4 +1,3 @@
-// index.ts - Your ZeroScale API handler (renamed from handler.ts)
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -88,3 +87,4 @@ const expressHandler = serverless(app, {
 });
 
 export const handler = expressHandler;
+
