@@ -18,5 +18,13 @@ const hostSchema = new Schema<IHost>(
   { timestamps: { createdAt: true, updatedAt: false } },
 );
 
+// Enhanced indexes for performance
+hostSchema.index({ state: 1 });
+hostSchema.index({ rating: -1 });
+hostSchema.index({ createdAt: -1 });
+hostSchema.index({ name: 'text', description: 'text', state: 'text' });
+hostSchema.index({ state: 1, rating: -1 });
+hostSchema.index({ rating: -1, createdAt: -1 });
+
 export const Host = mongoose.model<IHost>("Host", hostSchema);
 

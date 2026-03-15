@@ -42,7 +42,7 @@ export const login = async (payload: LoginInput): Promise<{ token: string; user:
       email: user.email,
     },
     JWT_SECRET,
-    { expiresIn: JWT_EXPIRES_IN },
+    { expiresIn: JWT_EXPIRES_IN } as jwt.SignOptions,
   );
 
   logger.info("User logged in", { userId: user.id, email: user.email });

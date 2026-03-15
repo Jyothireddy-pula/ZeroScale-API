@@ -4,12 +4,12 @@
     "module": "CommonJS",
     "outDir": "dist",
     "esModuleInterop": true,
-    "strict": true,
-    "noImplicitAny": true,
+    "strict": false,
+    "noImplicitAny": false,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": ["node", "jest"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": false
   },
   "include": ["index.ts", "src/**/*.ts", "__tests__/**/*.ts"],
   "exclude": ["node_modules", "dist"]

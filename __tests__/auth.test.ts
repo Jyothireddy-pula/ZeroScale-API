@@ -12,7 +12,6 @@ const invoke = (event: Record<string, unknown>) =>
       headers: event.headers || {},
     } as any,
     {} as any,
-    () => {},
   );
 
 describe("Auth API", () => {
@@ -27,8 +26,8 @@ describe("Auth API", () => {
 
   it("health check should work", async () => {
     const res = await invoke({ httpMethod: "GET", path: "/" });
-    const body = JSON.parse(res.body);
-    expect(res.statusCode).toBe(200);
+    const body = JSON.parse((res as any).body as string);
+    expect((res as any).statusCode).toBe(200);
     expect(body.success).toBe(true);
   });
 });

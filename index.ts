@@ -6,12 +6,13 @@ import mongoose from "mongoose";
 import serverless from "serverless-http";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
-import authRoutes from "./routes/authRoutes";
-import hostRoutes from "./routes/hostRoutes";
-import reviewRoutes from "./routes/reviewRoutes";
-import { rateLimiter } from "./middleware/rateLimiter";
-import { errorMiddleware } from "./middleware/errorMiddleware";
-import { requestLogger } from "./utils/logger";
+import authRoutes from "./src/routes/authRoutes";
+import hostRoutes from "./src/routes/hostRoutes";
+import reviewRoutes from "./src/routes/reviewRoutes";
+import { rateLimiter } from "./src/middleware/rateLimiter";
+import { errorMiddleware } from "./src/middleware/errorMiddleware";
+import { requestLogger } from "./src/utils/logger";
+import { performanceMonitor, healthCheck, requestCounter, MetricsCollector } from "./src/utils/monitoring";
 
 const app = express();
 
@@ -20,6 +21,10 @@ app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(rateLimiter);
+
+// Monitoring middleware
+app.use(performanceMonitor);
+app.use(requestCounter);
 
 // Simple request logging
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -58,7 +63,7 @@ const swaggerOptions: swaggerJsdoc.Options = {
       version: "1.0.0",
       description: "Serverless backend API for hosts and reviews",
     },
-    servers: [{ url: "/dev" }, { url: "/" }],
+    servers: [{ url: "/api/v1" }, { url: "/dev/api/v1" }],
   },
   apis: [],
 };
@@ -68,14 +73,13 @@ const swaggerSpec = swaggerJsdoc(swaggerOptions);
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Health check
-app.get("/", (_req: Request, res: Response) => {
-  res.json({ success: true, message: "ZeroScale-API is running", data: null });
-});
+app.get("/", healthCheck);
+app.get("/health", healthCheck);
 
-// Routes
-app.use("/auth", authRoutes);
-app.use("/hosts", hostRoutes);
-app.use("/reviews", reviewRoutes);
+// Routes with API versioning
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/hosts", hostRoutes);
+app.use("/api/v1/reviews", reviewRoutes);
 
 // Error handling
 app.use(errorMiddleware);

@@ -18,7 +18,12 @@ const reviewSchema = new Schema<IReview>(
   { timestamps: { createdAt: true, updatedAt: false } },
 );
 
+// Enhanced indexes for performance
 reviewSchema.index({ hostId: 1, userId: 1 }, { unique: true });
+reviewSchema.index({ hostId: 1, rating: -1 });
+reviewSchema.index({ userId: 1, createdAt: -1 });
+reviewSchema.index({ rating: -1, createdAt: -1 });
+reviewSchema.index({ hostId: 1, createdAt: -1 });
 
 export const Review = mongoose.model<IReview>("Review", reviewSchema);
 
