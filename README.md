@@ -38,16 +38,16 @@ GET https://api.zeroscale.dev/api/v1/auth/profile
 ## 🏗️ Architecture
 
 ```
-┌─────────────────┐    ┌─────────────┐    ┌─────────────────┐
-│   Client App   │───▶│ API Gateway │───▶│  AWS Lambda    │
-└─────────────────┘    └─────────────┘    └─────────────────┘
+┌─────────────────┐    ┌─────────────┐     ┌─────────────────┐
+│   Client App    │───▶| API Gateway │───▶│  AWS Lambda     │
+└─────────────────┘    └─────────────┘     └─────────────────┘
                                                       │
                               ┌─────────────────────────┼─────────────────────────┐
                               │                         │                         │
                               ▼                         ▼                         ▼
                     ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-                    │ MongoDB Atlas  │    │   Redis Cache  │    │ AWS CloudWatch │
-                    │   (Database)  │    │   (ElastiCache)│    │  (Monitoring)  │
+                    │ MongoDB Atlas   │    │   Redis Cache   │    │ AWS CloudWatch  │
+                    │   (Database)    │    │   (ElastiCache) │    │  (Monitoring)   │
                     └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
