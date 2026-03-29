@@ -1,0 +1,17 @@
+{
+  "name": "zeroscale-node-client",
+  "version": "1.0.0",
+  "description": "Node.js client example for ZeroScale API",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["api", "client", "zeroscale"],
+  "author": "ZeroScale API",
+  "license": "MIT"
+}
